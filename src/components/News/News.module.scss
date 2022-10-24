@@ -3,12 +3,13 @@ $color_text: #FFFAF0;
 
 .news {
   padding: 40px 4vw;
+  background-color: #2a2c2e;
 
   &__sectionTitle {
     position: relative;
     margin: 0 auto 15px;
     width: max-content;
-    font-size: 34px;
+    font-size: 31px;
     font-weight: 600;
     color: $colorTitle;
 

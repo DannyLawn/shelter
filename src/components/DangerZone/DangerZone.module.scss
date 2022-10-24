@@ -1,4 +1,4 @@
-$color_title: #ff3333;;
+$color_title: #ff3333;
 $color_text: #FFFAF0;
 
 .dangerZone {
@@ -8,7 +8,7 @@ $color_text: #FFFAF0;
   box-sizing: border-box;
   width: minmax(min-content, max-content);
   margin: 0 auto;
-  padding: 0 9% 80px;
+  padding: 80px 9%;
 
   &__title {
     margin: 0 0 14px;

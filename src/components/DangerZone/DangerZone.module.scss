@@ -1,0 +1,48 @@
+$color_title: #ff3333;;
+$color_text: #FFFAF0;
+
+.dangerZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: minmax(min-content, max-content);
+  margin: 0 auto;
+  padding: 0 9% 80px;
+
+  &__title {
+    margin: 0 0 14px;
+    max-width: 920px;
+    font-size: 34px;
+    font-weight: 600;
+    color: $color_title; 
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,2.0,0,1.0);
+    animation-duration: 1s;  
+  }
+
+  &__map {
+    max-width: 920px;
+    width: 100%;
+    display: block;
+  }
+
+  &__capture {
+    color: $color_text;
+    margin: 0 0 14px;
+    font-size: 12px;
+    opacity: .9;
+  }
+
+  &__captureAccent {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color_title; 
+  }
+}
+
+@keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}

@@ -1,0 +1,163 @@
+$color_mainGreen: #48761E;
+$color_hoverGreen: #619e28;
+$color_background: #16181b;
+$color_grey: #bfbfbf53;
+$color_smallCircle: #ff3333;
+$default_timer: 994ms;
+
+.header {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: 115px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  background-color: $color_background;
+
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 100%;
+    width: min-content;
+    list-style-type: none;
+    margin: 0 0 0 200px;
+    padding: 0;
+  }
+
+  &__extendingNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 100%;
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 140px;
+  will-change: transform;
+  animation-name: pulsar;
+  animation-duration: 2.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} 
+
+
+.button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 40px;
+  font-weight: 500;
+  
+  &:hover {
+    & .button__borderCircle { 
+      transform: translateX(60px);
+    }
+    
+    & .button__maskCircle {
+      clip-path: circle(25px at 85px);
+    }
+
+    & .button__text {
+      color: $color_hoverGreen;
+    }
+  }
+}
+
+.button__text {
+  z-index: 1;
+  font-size: 17px;
+  margin-right: -18px;
+  color: $color_mainGreen;
+  letter-spacing: 0.05em;
+  transition: all 1s ease;
+}
+
+.button__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.button__arrow {
+  left: 30px;
+  height: 3px;
+  width: 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background-color: $color_mainGreen;
+  
+  &:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    top: -5px;
+    right: -7px;
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid $color_mainGreen;
+  }
+}
+
+.button__borderCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $color_grey;
+  will-change: transform;
+  transition: transform $default_timer;
+}
+
+.button__maskCircle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(25px);
+  transition: clip-path $default_timer;
+}
+
+.button__smallCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  will-change: transform;
+  transform: translateX(60px);
+  background-color: $color_smallCircle;
+}
+
+@keyframes pulsar {
+  0% {
+      transform: scale(1);
+  }
+  30% {
+      transform:scale(1.02);
+  }
+  60% {
+    transform:scale(1);
+  }
+  80% {
+    transform:scale(1.03);
+  }
+  100% {
+    transform:scale(1);
+  }    
+}
+
+ 

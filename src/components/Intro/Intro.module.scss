@@ -1,0 +1,24 @@
+$color_text: #FFFAF0;
+$color_shadow: #fffaf09d;
+
+.intro {
+  padding: 20px 17vw;
+  color: $color_text;
+
+
+  &__text {
+    width: 100%;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: .2px;
+  }
+}
+
+.textAccent {
+  color: #48761E;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 0 34px $color_shadow;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}

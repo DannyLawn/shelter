@@ -1,0 +1,38 @@
+$color_mainGreen: #48761E;
+$color_hoverGreen: #619e28;
+$color_background: #16181b;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+  height: 90px;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: $color_background;
+
+  &__capture {
+    font-size: 14px;
+    color: $color_mainGreen;
+  }
+
+  &__rulesButton {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__rulesButtonImage {
+    display: block;
+    width: 180px;
+  }
+}

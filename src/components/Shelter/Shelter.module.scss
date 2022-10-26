@@ -1,0 +1,96 @@
+$colorTitle: #48761E;
+$color_capture: #ff3333;
+$color_text: #FFFAF0;
+$color_select: #3e3e3e66;
+$color_selectHover: #47474756;
+
+.shelter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px 0;
+  background-color: #222325;
+
+
+  &__title {
+    position: relative;
+    margin: 0 0 25px;
+    width: max-content;
+    font-size: 31px;
+    font-weight: 600;
+    color: $colorTitle;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 40px;
+      height: 40px;
+      background-image: url('../../images/sheltersIcon.png');
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__text {
+    margin: 40px auto 0;
+    max-width: 800px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: .2px;
+    color: $color_text;
+    opacity: .6;
+  }
+
+  &__capture {
+    margin: 40px 0 0;
+    color: $color_capture;
+    opacity: .5;
+    font-weight: normal;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+
+  }
+
+  &__image {
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  &__select {
+    box-sizing: border-box;
+    margin: 10px 0 80px;
+    border: 1px solid $colorTitle;
+    outline: none ;
+    background-color: $color_select;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 400;
+    width: 200px;
+    height: 45px;
+    color: $colorTitle;
+    font-size: 21px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color_selectHover;
+      }
+
+    &:checked { 
+      background-color: $color_selectHover; 
+      color: $color_text;
+    }
+  }
+
+
+  &__selectTownContainer {
+    position: relative;
+  }
+ 
+}

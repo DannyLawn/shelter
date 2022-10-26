@@ -5,7 +5,7 @@ import styles from './Header.module.scss';
 export default function Header() {
   return (
     <header className={styles.header}>
-      <img src={logo} className={styles.logo} alt="Знак радиации." />
+      <img src={logo} className={styles.logo} alt="Знак радиации."/>
       <ul className={styles.header__nav}>
         <li className={styles.button}>
           <div className={styles.button__text}>Напряженная&nbsp;зона</div>

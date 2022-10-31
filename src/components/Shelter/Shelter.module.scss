@@ -1,5 +1,5 @@
 $colorTitle: #48761E;
-$color_capture: #da0d51;
+$color_capture: #ff0a58;
 $color_text: #FFFAF0;
 $color_select: #3e3e3e66;
 $color_selectHover: #47474756;
@@ -95,6 +95,13 @@ $color_selectHover: #47474756;
 
   &__selectTownContainer {
     position: relative;
+  }
+
+  &__winnerDance {
+    display: block;
+    margin: 40px 0 0 auto;
+    max-width: 160px;
+    width: 100%;
   }
  
 }

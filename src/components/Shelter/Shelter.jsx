@@ -1,5 +1,7 @@
 import React from "react";
 import shelterImg from "../../images/shelterIMG.png";
+import InDevelopment from "../InDevelopment/InDevelopment.jsx";
+
 import styles from "./Shelter.module.scss";
 
 export default function Shelter() {
@@ -15,7 +17,7 @@ export default function Shelter() {
           <option className={styles.shelter__selectOption} value="second">Донецк</option>
           <option className={styles.shelter__selectOption} value="second">Луганск</option>
         </select>
-     
+        <InDevelopment />
     </section>
   );
 }

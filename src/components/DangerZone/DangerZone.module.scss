@@ -1,4 +1,4 @@
-$color_title: #ff3333;
+$color_title: #ff0a58;
 $color_text: #FFFAF0;
 
 .dangerZone {
@@ -8,7 +8,7 @@ $color_text: #FFFAF0;
   box-sizing: border-box;
   width: minmax(min-content, max-content);
   margin: 0 auto;
-  padding: 40px 9% 80px;
+  padding: 40px 9% 0;
 
   &__title {
     margin: 0 0 25px;
@@ -23,6 +23,7 @@ $color_text: #FFFAF0;
   }
 
   &__map {
+    border: 1px solid $color_title;
     max-width: 920px;
     width: 100%;
     display: block;
@@ -39,6 +40,11 @@ $color_text: #FFFAF0;
     font-size: 14px;
     font-weight: 500;
     color: $color_title; 
+  }
+  &__head {
+    display: block;
+    max-width: 110px;
+    margin-top: 60px;
   }
 }
 

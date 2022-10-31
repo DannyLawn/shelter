@@ -2,7 +2,7 @@ $color_mainGreen: #48761E;
 $color_hoverGreen: #619e28;
 $color_background: #16181b;
 $color_grey: #bfbfbf53;
-$color_smallCircle: #ff3333;
+$color_smallCircle: #ff0a58;
 $default_timer: 994ms;
 
 .header {
@@ -19,7 +19,7 @@ $default_timer: 994ms;
   &__nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 10px;
     height: 100%;
     width: min-content;
@@ -40,18 +40,31 @@ $default_timer: 994ms;
   }
 }
 
-.logo {
+.imgContainer {
   position: absolute;
+  display: block;
   top: 10px;
   left: 30px;
-  width: 140px;
   will-change: transform;
   animation-name: pulsar;
   animation-duration: 2.4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-} 
+  will-change: transform;
+  cursor: pointer;
+  transition: transform 1s ease-in;
 
+  &__logo {
+    max-width: 124px;
+    width: 100%;
+    transition: transform 2s ease-in-out; 
+
+
+    &:hover {
+      transform: scale(1.24) translateX(17px) translateY(21px) rotate(94deg);
+    }
+  }
+}
 
 .button {
   display: flex;
@@ -134,8 +147,8 @@ $default_timer: 994ms;
 }
 
 .button__smallCircle {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   will-change: transform;
   transform: translateX(60px);

@@ -4,19 +4,20 @@ $color_background: #16181b;
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
   flex-grow: 0;
   flex-shrink: 0;
   position: relative;
   box-sizing: border-box;
   height: 90px;
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px 30px 10px;
   background-color: $color_background;
 
   &__capture {
-    font-size: 14px;
+    font-size: 10px;
+    font-weight: 600;
     color: $color_mainGreen;
   }
 

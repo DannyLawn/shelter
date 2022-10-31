@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 import rulesImage from '../../images/rules.png';
 import rulesImageHover from '../../images/rules_hover.png';
 
-export default function Footer() {
+export default function Footer({ rulesButtonState }) {
 
   const [onHoverButton, setOnHoverButton] = React.useState(false);
 
@@ -14,9 +14,11 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <p className={styles.footer__capture}>© 2022 Shelter, Inc. All Rights Reserved.</p>
-      <button className={styles.footer__rulesButton} onMouseEnter={handleOnHover} onMouseLeave={handleOnHover} >
-        {!onHoverButton ? (<img className={styles.footer__rulesButtonImage} src={rulesImage} alt="Правила." />) : (<img className={styles.footer__rulesButtonImage} src={rulesImageHover} alt="Правила." />)}
-      </button>
+      {Boolean(rulesButtonState) && (
+        <button className={styles.footer__rulesButton} onMouseEnter={handleOnHover} onMouseLeave={handleOnHover} >
+          {!onHoverButton ? (<img className={styles.footer__rulesButtonImage} src={rulesImage} alt="Правила." />) : (<img className={styles.footer__rulesButtonImage} src={rulesImageHover} alt="Правила." />)}
+        </button>
+      )}
     </footer>
   );
 }

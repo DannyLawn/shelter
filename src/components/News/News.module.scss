@@ -2,8 +2,8 @@ $colorTitle: #48761E;
 $color_text: #FFFAF0;
 
 .news {
-  padding: 40px 4vw;
-  background-color: #2a2c2e;
+  min-height: 100%;
+  padding: 40px 4vw 80px;
 
   &__sectionTitle {
     position: relative;

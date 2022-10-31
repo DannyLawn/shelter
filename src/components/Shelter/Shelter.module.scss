@@ -1,5 +1,5 @@
 $colorTitle: #48761E;
-$color_capture: #ff3333;
+$color_capture: #da0d51;
 $color_text: #FFFAF0;
 $color_select: #3e3e3e66;
 $color_selectHover: #47474756;
@@ -8,7 +8,7 @@ $color_selectHover: #47474756;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px 0;
+  padding: 40px 40px 80px;
   background-color: #222325;
 
 
@@ -47,17 +47,21 @@ $color_selectHover: #47474756;
   &__capture {
     margin: 40px 0 0;
     color: $color_capture;
-    opacity: .5;
+    opacity: .7;
     font-weight: normal;
     text-align: center;
-    font-size: 12px;
+    font-size: 17px;
     text-transform: uppercase;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,2.0,0,1.0);
+    animation-duration: 1s; 
 
   }
 
   &__image {
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 680px;
     width: 100%;
     display: block;
     object-fit: contain;
@@ -65,7 +69,7 @@ $color_selectHover: #47474756;
 
   &__select {
     box-sizing: border-box;
-    margin: 10px 0 80px;
+    margin: 25px 0 0;
     border: 1px solid $colorTitle;
     outline: none ;
     background-color: $color_select;
@@ -93,4 +97,9 @@ $color_selectHover: #47474756;
     position: relative;
   }
  
+}
+
+@keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
 }

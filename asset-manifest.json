@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shelter/static/css/main.51ddef63.css",
-    "main.js": "/shelter/static/js/main.bf8539c6.js",
+    "main.css": "/shelter/static/css/main.e300f7b5.css",
+    "main.js": "/shelter/static/js/main.69ba941e.js",
     "static/media/shelterIMG.png": "/shelter/static/media/shelterIMG.d2e189b14701dd2ea710.png",
     "static/media/rules.png": "/shelter/static/media/rules.88e7066b5bdbf1b0f9d0.png",
     "static/media/rules_hover.png": "/shelter/static/media/rules_hover.2757693b5c4d5045f9c6.png",
@@ -15,14 +15,15 @@
     "static/media/Inter-Medium.woff2": "/shelter/static/media/Inter-Medium.8a50feca5194fae5cc45.woff2",
     "static/media/Inter-Regular.woff2": "/shelter/static/media/Inter-Regular.6fcad65b7a8f7ffabb8e.woff2",
     "static/media/logo.png": "/shelter/static/media/logo.770db56eb751b5cd741f.png",
+    "static/media/logoHovered.png": "/shelter/static/media/logoHovered.863221990afb9e32b5f3.png",
     "static/media/newsIcon.png": "/shelter/static/media/newsIcon.e1f85dadace1450705b5.png",
     "static/media/sheltersIcon.png": "/shelter/static/media/sheltersIcon.b408232ea0aabdf8e11b.png",
     "index.html": "/shelter/index.html",
-    "main.51ddef63.css.map": "/shelter/static/css/main.51ddef63.css.map",
-    "main.bf8539c6.js.map": "/shelter/static/js/main.bf8539c6.js.map"
+    "main.e300f7b5.css.map": "/shelter/static/css/main.e300f7b5.css.map",
+    "main.69ba941e.js.map": "/shelter/static/js/main.69ba941e.js.map"
   },
   "entrypoints": [
-    "static/css/main.51ddef63.css",
-    "static/js/main.bf8539c6.js"
+    "static/css/main.e300f7b5.css",
+    "static/js/main.69ba941e.js"
   ]
 }

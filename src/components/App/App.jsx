@@ -7,6 +7,7 @@ import News from '../News/News';
 import Shelter from '../Shelter/Shelter';
 import Volunteering from '../Volunteering/Volunteering';
 import styles from './App.module.scss';
+import Rules from '../Rules/Rules';
 
 function App() {
 
@@ -16,9 +17,21 @@ function App() {
   const [mainIntroState, setMainIntroState ] = React.useState(true);
   const [volunteeringState, setVolunteeringState ] = React.useState(false);
   const [rulesButtonState, setRulesButtonState] = React.useState(true);
+  const [rulesState, setRulesingState ] = React.useState(false);
  
   function openVolunteeringPage() {
     setVolunteeringState(true);
+    setShelterState(false);
+    setNewsState(false);
+    setDZoneState(false);
+    setMainIntroState(false);
+    setRulesButtonState(false);
+    setRulesingState(false);
+  }
+
+  function openRulesPage() {
+    setRulesingState(true);
+    setVolunteeringState(false);
     setShelterState(false);
     setNewsState(false);
     setDZoneState(false);
@@ -33,6 +46,7 @@ function App() {
     setMainIntroState(false);
     setRulesButtonState(false);
     setVolunteeringState(false);
+    setRulesingState(false);
   }
 
   function openShelterPage() {
@@ -42,6 +56,7 @@ function App() {
     setMainIntroState(false);
     setRulesButtonState(false);
     setVolunteeringState(false);
+    setRulesingState(false);
   }
 
   function openDZonePage() {
@@ -51,6 +66,7 @@ function App() {
     setMainIntroState(false);
     setRulesButtonState(false);
     setVolunteeringState(false);
+    setRulesingState(false);
   }
 
   function openMainIntro() {
@@ -60,6 +76,7 @@ function App() {
     setShelterState(false);
     setNewsState(false);
     setVolunteeringState(false);
+    setRulesingState(false);
   }
 
 
@@ -72,9 +89,11 @@ function App() {
         {Boolean(shelterState) && (<Shelter />)}
         {Boolean(dZoneState) && <DangerZone />}
         {Boolean(volunteeringState) && <Volunteering />}
+        {Boolean(rulesState) && <Rules />}
+        
 
       </main>
-      <Footer rulesButtonState={rulesButtonState} />
+      <Footer rulesButtonState={rulesButtonState} openRulesPage={openRulesPage} />
     </div>
   );
 }

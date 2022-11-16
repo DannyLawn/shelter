@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from '../../images/logo.png';
 import logoHovered from '../../images/logoHovered.png';
-import { useDispatch } from 'react-redux';
-import { openNewsPage, openDZonePage, openMainPage, openShelterPage, openVolunteeringPage } from '../../services/slices/app-navigation-slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { openNewsPage, openDZonePage, openMainPage, openShelterPage, openVolunteeringPage, changeNukeHover } from '../../services/slices/app-navigation-slice';
 import styles from './Header.module.scss';
 
 export default function Header() {
 
   const dispatch = useDispatch();
-  const [hoverLogo, setHoverLogo] = React.useState(false);
-
-  function toggleHoverLogo() {
-    setHoverLogo(!hoverLogo);
-  }
+  const { nukeHover } = useSelector(store => store.appNavigation);
 
 
   return (
     <header className={styles.header}>
-      <div className={styles.imgContainer} onMouseEnter={toggleHoverLogo} onMouseLeave={toggleHoverLogo}>
-        { Boolean(!hoverLogo) ? (<img src={logo} className={styles.imgContainer__logo} alt="Знак радиации." onClick={()=>{ dispatch(openMainPage())} } />) : (<img src={logoHovered} className={styles.imgContainer__logo} alt="Знак радиации." onClick={()=>{dispatch(openMainPage())}}/>) }
+      <div className={styles.imgContainer} onMouseEnter={()=>{dispatch(changeNukeHover())}} onMouseLeave={()=>{dispatch(changeNukeHover())}} onClick={()=>{dispatch(changeNukeHover())}}>
+        { Boolean(!nukeHover) ? (<img src={logo} className={styles.imgContainer__logo} alt="Знак радиации." onClick={()=>{ dispatch(openMainPage())} } />) : (<img src={logoHovered} className={styles.imgContainer__logo} alt="Знак радиации." onClick={()=>{dispatch(openMainPage())}}/>) }
       </div>  
       <ul className={styles.header__nav}>
         <li className={styles.button} onClick={()=>{ dispatch(openDZonePage())}}>

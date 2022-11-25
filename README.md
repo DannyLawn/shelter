@@ -4,6 +4,7 @@
 
 ## Используемые технологии
 - React, CRA
+- Redux(toolkit)
 - JavaScript, JSX
 - SCSS-modules
 

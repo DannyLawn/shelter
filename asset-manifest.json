@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shelter/static/css/main.427f520a.css",
-    "main.js": "/shelter/static/js/main.b02b0675.js",
+    "main.js": "/shelter/static/js/main.fcc4c6cc.js",
     "static/media/shelterIMG.png": "/shelter/static/media/shelterIMG.d2e189b14701dd2ea710.png",
     "static/media/rules.png": "/shelter/static/media/rules.88e7066b5bdbf1b0f9d0.png",
     "static/media/rules_hover.png": "/shelter/static/media/rules_hover.2757693b5c4d5045f9c6.png",
@@ -22,10 +22,10 @@
     "static/media/sheltersIcon.png": "/shelter/static/media/sheltersIcon.b408232ea0aabdf8e11b.png",
     "index.html": "/shelter/index.html",
     "main.427f520a.css.map": "/shelter/static/css/main.427f520a.css.map",
-    "main.b02b0675.js.map": "/shelter/static/js/main.b02b0675.js.map"
+    "main.fcc4c6cc.js.map": "/shelter/static/js/main.fcc4c6cc.js.map"
   },
   "entrypoints": [
     "static/css/main.427f520a.css",
-    "static/js/main.b02b0675.js"
+    "static/js/main.fcc4c6cc.js"
   ]
 }
